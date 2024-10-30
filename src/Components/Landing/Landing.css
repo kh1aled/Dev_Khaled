@@ -1,0 +1,45 @@
+.landing {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../assets/assets.png);
+  background-size: contain;
+  background-repeat: repeat;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.landing .row {
+  padding-top: 80px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.landing .row .image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .row .image_container img {
+  width: 35rem;
+}
+.landing .row .description {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 4rem;
+  color: #fff !important;
+}
+.landing .row .description h1 {
+  text-transform: capitalize;
+}
+.landing .row .description h1 span {
+  color: rgb(244, 139, 28);
+}
+.landing .row .description p {
+  font-size: 1.2rem;
+  color: #f7f4f4;
+}/*# sourceMappingURL=Landing.css.map */

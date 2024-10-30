@@ -1,0 +1,51 @@
+@use "../../styles/variables/colors" as *;
+@use "../../styles/variables/mediaQuery" as *;
+@use "../../styles/mixins" as *;
+
+.landing {
+  
+  background-color: rgb(0 0 0 / 90%);
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../assets/assets.png);
+  background-size: contain;
+  background-repeat: repeat;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
+  font-style: normal;
+  .row {
+    padding-top: 80px;
+    height: 100%;
+    background-color: rgb(0 0 0 / 20%);
+    .image_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 35rem;
+      }
+    }
+    .description {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      padding: 4rem;
+      color: #fff !important;
+      h1 {
+        text-transform: capitalize;
+        span{
+            color: $textColor;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        color: #f7f4f4;
+        
+      }
+    }
+  }
+}

@@ -2,7 +2,12 @@
   "lang": "en",
   "navbar": {
     "title": "Children's education school",
-    "lang": "عربي"
+    "lang": "arabic"
+  },
+  "summary":{
+    "h1":"Full-Stack",
+    "span":"Developer!",
+    "body":"Hello! I'm Khaled, a Full-Stack Developer with a passion for building and developing web applications. I specialize in both front-end and back-end development, using technologies like React, PHP, and MySQL, along with an interest in cybersecurity and performance optimization. My goal is to deliver innovative digital solutions that offer exceptional user experiences and meet project needs effectively."
   },
   "sidebar": {
     "li1": "Books",
