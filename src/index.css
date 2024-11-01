@@ -35,6 +35,22 @@ button {
   cursor: pointer;
 }
 
+.mybutton {
+  color: #fff;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 7px;
+  transition: 0.5s;
+  outline: 0;
+  border: 2px solid transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mybutton a {
+  color: #fff;
+}
+
 a {
   text-decoration: none !important;
 }/*# sourceMappingURL=index.css.map */

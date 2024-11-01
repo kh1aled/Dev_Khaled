@@ -1,0 +1,183 @@
+@use "../../styles/variables/colors" as *;
+@use "../../styles/variables/mediaQuery" as *;
+@use "../../styles/mixins" as *;
+
+.about {
+  width: 100%;
+  background-color: rgb(51 63 90/0.5);
+  overflow: hidden;
+  .row {
+    padding-top: 80px;
+    background-color: rgb(51 63 90/0.7);
+    .image_container {
+      height: 50vh;
+      position: relative;
+      .profile {
+        top: 18%;
+        right: 18%;
+        width: 60%;
+        position: absolute;
+        z-index: 10;
+        z-index: 10;
+      }
+      .circle {
+        top: 30%;
+        right: 14%;
+        transform: translateY(0) rotate(276deg);
+        width: 66%;
+        position: absolute;
+        z-index: 1;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-name: movecircle;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-direction: alternate-reverse;
+      }
+      .points {
+        top: 60%;
+        right: 24%;
+        width: 36%;
+
+        transform: translateY(0) rotate(137deg);
+
+        position: absolute;
+        z-index: 7;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-name: movePoints;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-direction: alternate-reverse;
+        @include mediaQuery($smallScreen_max_width){
+          top: 40%;
+
+        }
+      }
+      .wave {
+        right: 55%;
+        top: 32%;
+        transform: translate(0, 0);
+        width: 12%;
+        position: absolute;
+        z-index: 12;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-name: moveWave;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-direction: alternate-reverse;
+      }
+      .smcircle {
+        right: 10%;
+        top: 10%;
+        transform: translate(0, 0);
+        width: 8rem;
+        position: absolute;
+        z-index: 12;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-name: movesmcircle;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-direction: alternate-reverse;
+      }
+      .solidCircle {
+        right: 10%;
+        top: 10%;
+        transform: translateY(0);
+        width: 16%;
+        position: absolute;
+        z-index: 222;
+        animation-duration: 4s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-name: movesolidCircle;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-direction: alternate-reverse;
+      }
+    }
+    .description {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      padding: 4rem;
+      color: #fff !important;
+      font-weight: 900;
+   
+      h1 {
+        font-size: 13vmin;
+        &:nth-child(1) {
+          color: $textColor;
+          font-size: 6vmin;
+        }
+        text-transform: capitalize;
+        span {
+          color: $textColor;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        color: #f7f4f4;
+      }
+    }
+    button {
+      background-color: rgb(6 182 212/1);
+
+      a {
+        color: #fff;
+      }
+      &:hover {
+        background-color: transparent !important;
+        border: 2px solid rgb(6 182 212/1) !important;
+        a {
+          color: rgb(6 182 212/1) !important;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes movecircle {
+  from {
+    transform: translateY(0) rotate(276deg);
+  }
+  to {
+    transform: translateY(0) rotate(236deg);
+  }
+}
+@keyframes movePoints {
+  from {
+    transform: translateY(0) rotate(137deg);
+  }
+  to {
+    transform: translateY(0) rotate(117deg);
+  }
+}
+@keyframes moveWave {
+  from {
+    transform: translate(-5%, 0);
+  }
+  to {
+    transform: translate(-40%, 0);
+  }
+}
+@keyframes movesmcircle {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-10%, 20%);
+  }
+}
+@keyframes movesolidCircle {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-10%, 20%);
+  }
+}

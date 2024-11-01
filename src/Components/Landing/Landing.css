@@ -5,12 +5,9 @@
   background-image: url(../../assets/assets.png);
   background-size: contain;
   background-repeat: repeat;
-  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: normal;
   font-family: "Aref Ruqaa", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 .landing .row {
   padding-top: 80px;
@@ -22,7 +19,7 @@
   justify-content: center;
   align-items: center;
 }
-.landing .row .image_container img {
+.landing .row .image_container .profile {
   width: 35rem;
 }
 .landing .row .description {
@@ -42,4 +39,18 @@
 .landing .row .description p {
   font-size: 1.2rem;
   color: #f7f4f4;
+}
+.landing .row button {
+  background-color: rgb(169, 49, 11);
+  margin-top: 1rem;
+}
+.landing .row button a {
+  color: #fff;
+}
+.landing .row button:hover {
+  background-color: transparent !important;
+  border: 2px solid rgb(179, 60, 24) !important;
+}
+.landing .row button:hover a {
+  color: rgb(179, 60, 24) !important;
 }/*# sourceMappingURL=Landing.css.map */

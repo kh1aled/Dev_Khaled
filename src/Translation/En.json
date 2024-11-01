@@ -7,7 +7,15 @@
   "summary":{
     "h1":"Full-Stack",
     "span":"Developer!",
-    "body":"Hello! I'm Khaled, a Full-Stack Developer with a passion for building and developing web applications. I specialize in both front-end and back-end development, using technologies like React, PHP, and MySQL, along with an interest in cybersecurity and performance optimization. My goal is to deliver innovative digital solutions that offer exceptional user experiences and meet project needs effectively."
+    "body":"Hello! I'm Khaled, a Full-Stack Developer with a passion for building and developing web applications. I specialize in both front-end and back-end development, using technologies like React, PHP, and MySQL, along with an interest in cybersecurity and performance optimization. My goal is to deliver innovative digital solutions that offer exceptional user experiences and meet project needs effectively.",
+    "button":"contact me"
+  },
+  "about":{
+    "prename" : "Dev/",
+    "name":"Khaled",
+    "name2":"Hamdy",
+    "title":"With us, designing your website is easier and faster!",
+    "button": "contact me"
   },
   "sidebar": {
     "li1": "Books",
