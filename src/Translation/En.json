@@ -15,62 +15,11 @@
     "name":"Khaled",
     "name2":"Hamdy",
     "title":"With us, designing your website is easier and faster!",
-    "button": "contact me"
-  },
-  "sidebar": {
-    "li1": "Books",
-    "li2": "Lessons",
-    "li3": "Virtual Classes",
-    "li4": "HomeWork",
-    "li5": "Quizzes",
-    "li6": "Manhal media",
-    "li7": "Classes",
-    "li8": "Groups",
-    "li9": "Students",
-    "li10": "Grade Book",
-    "li11": "Attendance",
-    "li11To1": "Class Attendance",
-    "li11To2": "V.C. Attendance",
-    "li12": "Tools",
-    "li12To1": "Badges",
-    "li12To2": "Calender",
-    "li12To3": "School Schedule",
-    "li12To4": "Media Library",
-    "li13": "Editors",
-    "li13To1": "Lessons Builder",
-    "li13To2": "Exercises Builder"
-  },
-  "block_header": {
-    "breadcrumb1": "Home",
-    "breadcrumb2": "Lessons"
-  },
-  "lessons_alert": {
-    "header": {
-      "title": "Lessons",
-      "popup_header": " - Add Lesson"
-    },
-    "nav_tabs": {
-      "navinfo": "Information",
-      "navgoals": "Learning Objectives"
-    },
-    "form_labels": {
-      "label1": "Title",
-      "label2": "Description",
-      "label3": "Subject",
-      "label4": "Books",
-      "label5": "Grades",
-      "label6":"Teacher",
-      "label7":"Actions",
-      "btn": "save",
-      "placeholder":"type here"
-    }
-  },
-   "searchInput":"search",
-   "filterInput":"filter",
-   "pag":{
-    "span1":"Showing",
-    "span2":"to",
-    "span3":"of",
-    "span4":"Admins"
-   }
+    "work":"My Work",
+    "button": "contact me",
+    "button2" :"download my cv",
+    "desc":"A full-stack web developer with 3 years of experience in building and enhancing web applications using modern technologies. I have strong skills in HTML, CSS, JavaScript, React, Redux, Sass, PugJS, and Bootstrap, along with backend expertise in PHP, MySQL, and Laravel. My goal is to deliver creative solutions that meet client needs and provide the best user experience."
+  }
+  
+ 
 }

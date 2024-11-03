@@ -1,0 +1,63 @@
+.fotter {
+  width: 100%;
+  background-color: rgb(51, 65, 85);
+  padding: 20px 0;
+}
+.fotter .social_links {
+  width: 40%;
+  margin: 40px auto;
+}
+.fotter .social_links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  gap: 5%;
+}
+.fotter .social_links ul li a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4705882353);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: 0.3s;
+}
+.fotter .social_links ul li a:hover {
+  background-color: white;
+  color: #000;
+}
+.fotter .details {
+  width: 80%;
+  margin: 40px auto;
+}
+.fotter .details .column {
+  height: 100%;
+  padding: 16px;
+  color: #fff !important;
+}
+.fotter .details .column .title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.fotter .details .column .description {
+  color: rgba(255, 255, 255, 0.5098039216);
+}
+.fotter .copyright {
+  width: 100%;
+  margin: 63px auto 0px auto;
+  padding: 10px;
+  border-top: 1px solid #000;
+}
+.fotter .copyright p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5098039216);
+  text-transform: capitalize;
+  margin: 10px 0;
+}/*# sourceMappingURL=FotterStyles.css.map */
