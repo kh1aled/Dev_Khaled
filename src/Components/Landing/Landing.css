@@ -1,5 +1,4 @@
 .landing {
-  background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100vh;
   background-image: url(../../assets/assets.png);
@@ -9,10 +8,37 @@
   font-style: normal;
   font-family: "Aref Ruqaa", serif;
 }
+.landing.dark {
+  background-color: rgba(8, 12, 20, 0.91);
+}
+.landing.dark .row {
+  background-color: rgba(8, 12, 20, 0.91);
+}
+.landing.dark .row .description {
+  color: #fff;
+}
+.landing.dark .row .description h1 {
+  color: #fff;
+}
+.landing.dark .row .description h1 p {
+  color: #f7f4f4;
+}
+.landing.light {
+  background-color: rgb(255, 255, 255);
+}
+.landing.light .row {
+  background-color: rgba(255, 255, 255, 0.51);
+}
+.landing.light .row .description {
+  color: #121212;
+  font-weight: 700;
+}
+.landing.light .row .description h1 p {
+  color: #f7f4f4;
+}
 .landing .row {
   padding-top: 80px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .landing .row .image_container {
   display: flex;
@@ -28,7 +54,6 @@
   align-items: start;
   flex-direction: column;
   padding: 4rem;
-  color: #fff !important;
 }
 .landing .row .description h1 {
   text-transform: capitalize;
@@ -38,7 +63,6 @@
 }
 .landing .row .description p {
   font-size: 1.2rem;
-  color: #f7f4f4;
 }
 .landing .row button {
   background-color: rgb(169, 49, 11);

@@ -14,16 +14,16 @@
   font-family: "Aref Ruqaa", serif;
   // background-image: url(../../assets/assets.png);
   .title {
-    width: 16%;
-    margin: 3rem auto;
+    width: 30%;
     text-transform: capitalize;
     color: white;
     text-align: center;
     position: relative;
+    margin: 3rem auto;
     &::after {
       content: "";
       position: absolute;
-      width: 14rem;
+      width: 60%;
       height: 0.3rem;
       background-color: rgb(14, 165, 233);
       top: 50%;
@@ -34,7 +34,7 @@
     &::before {
       content: "";
       position: absolute;
-      width: 14rem;
+      width: 60%;
       height: 0.2rem;
       background-color: rgb(14, 165, 233);
       top: 50%;
@@ -43,6 +43,7 @@
       transform: translateY(-50%);
     }
   }
+
   .slider {
     margin: auto;
     width: 100%;

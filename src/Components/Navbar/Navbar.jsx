@@ -5,8 +5,11 @@ import { changeLanguage } from "../../Store/TranslationSlice";
 import img from "../../assets/abc-block.png";
 import dev_kh from "../../assets/dev_khaled.png";
 import { Link } from "react-router-dom";
-const Navbar = () => {
+import { changeTheme } from "../../Store/themeSlice";
+const Navbar = ({ status, navWidth }) => {
   const texts = useSelector((state) => state.translation.texts);
+  const theme = useSelector((state) => state.theme.theme);
+
   const dispatch = useDispatch();
   const collapse = useRef();
   const bars = useRef();
@@ -15,8 +18,21 @@ const Navbar = () => {
     collapse.current.classList.toggle("show");
   };
 
+  const changeMyTheme = () => {
+    theme === "dark"
+      ? dispatch(changeTheme("light"))
+      : dispatch(changeTheme("dark"));
+
+    console.log(theme);
+  };
   return (
-    <nav className="navbar myNav navbar-expand-lg navbar-light">
+    <nav
+      className={
+        status
+          ? "navbar myNav navbar-expand-lg navbar-light active"
+          : "navbar myNav navbar-expand-lg navbar-light"
+      }
+    >
       <button
         className="navbar-toggler"
         type="button"
@@ -29,17 +45,62 @@ const Navbar = () => {
       >
         <i className="fa-solid fa-angle-down"></i>
       </button>
-      <div className="progress-bar"></div>
+      <div className={status ? "progress-bar active" : "progress-bar"}></div>
+      <div
+        className={
+          status ? "progress-bar-active active" : "progress-bar-active"
+        }
+        style={{ width: navWidth + "%" }}
+      ></div>
       <div className="navbar-icon">
         <img src={dev_kh} alt="" />
-        <div className="change_theme_container">
-          
-          <button className="change_theme_button">
-          <div className="active_el"></div>
-            <button className="bright">
-            <svg width="24" height="24" fill="none" class="transform transition-transform scale-100 duration-300"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <div
+          onClick={changeMyTheme}
+          className={
+            theme === "light"
+              ? "change_theme_container light"
+              : "change_theme_container dark"
+          }
+        >
+          <button
+            className={
+              theme === "light"
+                ? "change_theme_button light"
+                : "change_theme_button dark"
+            }
+          >
+            <div
+              className={
+                theme === "light" ? "active_el left" : "active_el right"
+              }
+            ></div>
+            <button className={theme === "light" ? "bright active" : "bright"}>
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                class="transform transition-transform scale-100 duration-300"
+              >
+                <path
+                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
             </button>
-            <button className="dark">
+            <button
+              className={theme === "light" ? "dark " : "dark active"}
+            >
               <svg
                 width="24"
                 height="24"

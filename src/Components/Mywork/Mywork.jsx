@@ -13,7 +13,7 @@ const Work = () => {
       <h1 className="title">{texts.work}</h1>
       <div className="slider">
         <div className="row g-4 slider_container p-3">
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -22,7 +22,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -31,7 +31,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -40,7 +40,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -49,7 +49,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -58,7 +58,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -67,7 +67,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -76,7 +76,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>
@@ -85,7 +85,7 @@ const Work = () => {
               <img src={img} alt="" />
             </Link>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 work-item">
+          <div className="col-12 col-md-6 col-lg-4 work-item" data-aos="fade-up">
             <Link to={"test.html"} className="card">
               <div className="project-title">
                 <h1>blog website</h1>

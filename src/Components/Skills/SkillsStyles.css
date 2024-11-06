@@ -2,23 +2,61 @@
   width: 100%;
   padding: 40px 0;
   overflow: hidden;
-  background-color: #080c14;
   font-weight: 400;
   font-style: normal;
   font-family: "Aref Ruqaa", serif;
 }
+.skills.dark {
+  background-color: #080c14;
+}
+.skills.dark .title {
+  color: white;
+}
+.skills.dark .description {
+  color: #fff;
+}
+.skills.dark .description h1 p {
+  color: #f7f4f4;
+}
+.skills.dark .areas .slider .card .project-title {
+  background-color: #111827;
+}
+.skills.dark .areas .slider .card .project-title h1 {
+  color: #f3f4f6;
+}
+.skills.light {
+  background-color: #fff;
+}
+.skills.light .title {
+  color: #121212;
+}
+.skills.light .description {
+  color: #121212;
+  font-weight: 700;
+}
+.skills.light .description h1 p {
+  color: #000000;
+}
+.skills.light .areas .slider .card .project-title {
+  background-color: #f3f4f6;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.skills.light .areas .slider .card .project-title h1 {
+  color: black;
+  font-weight: 700;
+}
 .skills .title {
-  width: 16%;
-  margin: 3rem auto;
+  width: 30%;
   text-transform: capitalize;
   color: white;
   text-align: center;
   position: relative;
+  margin: 3rem auto;
 }
 .skills .title::after {
   content: "";
   position: absolute;
-  width: 14rem;
+  width: 60%;
   height: 0.3rem;
   background-color: rgb(14, 165, 233);
   top: 50%;
@@ -29,7 +67,7 @@
 .skills .title::before {
   content: "";
   position: absolute;
-  width: 14rem;
+  width: 60%;
   height: 0.2rem;
   background-color: rgb(14, 165, 233);
   top: 50%;

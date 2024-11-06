@@ -3,7 +3,9 @@
 @use "../../styles/mixins" as *;
 
 .landing {
-  background-color: rgb(0 0 0 / 90%);
+  //#080c1452
+  // background-color: rgb(0 0 0 / 90%);
+  // background-color: rgb(8 12 20 / 91%);
   width: 100%;
   height: 100vh;
   background-image: url(../../assets/assets.png);
@@ -12,12 +14,44 @@
   font-weight: 400;
   font-style: normal;
   font-family: "Aref Ruqaa", serif;
+  &.dark {
+    background-color: rgb(8 12 20 / 91%);
+    .row {
+      background-color: rgb(8 12 20 / 91%);
+      .description {
+        color: #fff;
+        h1 {
+          
+          color: #fff;
+          p {
+            color: #f7f4f4;
+          }
+        }
+      }
+    }
+  }
+  &.light {
+    background-color: rgb(255 255 255);
+    .row {
+      background-color: rgb(255 255 255 / 51%);
+      .description {
+        color: #121212;
+        font-weight: 700;
 
+        h1 {
+          p {
+            color: #f7f4f4;
+          }
+        }
+      }
+    }
+  }
 
   .row {
     padding-top: 80px;
     height: 100%;
-    background-color: rgb(0 0 0 / 20%);
+    // background-color: rgb(0 0 0 / 20%);
+
     .image_container {
       display: flex;
       justify-content: center;
@@ -25,7 +59,6 @@
       .profile {
         width: 35rem;
       }
-
     }
     .description {
       display: flex;
@@ -33,31 +66,28 @@
       align-items: start;
       flex-direction: column;
       padding: 4rem;
-      color: #fff !important;
+
       h1 {
         text-transform: capitalize;
-        span{
-            color: $textColor;
+        span {
+          color: $textColor;
         }
       }
       p {
         font-size: 1.2rem;
-        color: #f7f4f4;
-        
       }
     }
-    button{
+    button {
       background-color: rgb(169 49 11);
       margin-top: 1rem;
-      a{
+      a {
         color: #fff;
       }
-      &:hover{
+      &:hover {
         background-color: transparent !important;
-        border: 2px  solid rgb(179, 60, 24) !important;
-        a{
-          
-          color:rgb(179, 60, 24) !important;
+        border: 2px solid rgb(179, 60, 24) !important;
+        a {
+          color: rgb(179, 60, 24) !important;
         }
       }
     }
