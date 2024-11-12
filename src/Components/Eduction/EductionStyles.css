@@ -52,7 +52,7 @@
   text-transform: capitalize;
   text-align: center;
   position: relative;
-  margin: 3rem auto;
+  margin: 3rem auto 1rem auto;
 }
 .eduction .title::after {
   content: "";

@@ -1,18 +1,27 @@
 .about {
   width: 100%;
-  background-color: rgba(51, 63, 90, 0.5);
+  background-color: rgb(51, 63, 90);
   overflow: hidden;
+  background-image: url(../../assets/assets.png);
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Aref Ruqaa", serif;
 }
 .about .row {
-  padding-top: 80px;
   background-color: rgba(51, 63, 90, 0.7);
+}
+.about .row div:nth-child(1) {
+  height: 33rem;
+}
+.about .row div:nth-child(2) {
+  height: 33rem;
 }
 .about .row .image_container {
   height: 50vh;
   position: relative;
 }
 .about .row .image_container .profile {
-  top: 18%;
+  top: 0%;
   right: 18%;
   width: 60%;
   position: absolute;
@@ -20,7 +29,7 @@
   z-index: 10;
 }
 .about .row .image_container .circle {
-  top: 30%;
+  top: 13%;
   right: 14%;
   transform: translateY(0) rotate(276deg);
   width: 66%;
@@ -49,7 +58,8 @@
 }
 @media (max-width: 768px) {
   .about .row .image_container .points {
-    top: 40%;
+    top: 30%;
+    right: 32%;
   }
 }
 .about .row .image_container .wave {
@@ -66,6 +76,11 @@
   animation-fill-mode: both;
   animation-direction: alternate-reverse;
 }
+@media (max-width: 768px) {
+  .about .row .image_container .wave {
+    top: 12%;
+  }
+}
 .about .row .image_container .smcircle {
   right: 10%;
   top: 10%;
@@ -79,6 +94,12 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   animation-direction: alternate-reverse;
+}
+@media (max-width: 768px) {
+  .about .row .image_container .smcircle {
+    right: 4%;
+    top: 3%;
+  }
 }
 .about .row .image_container .solidCircle {
   right: 10%;
@@ -95,6 +116,12 @@
   animation-fill-mode: both;
   animation-direction: alternate-reverse;
 }
+@media (max-width: 768px) {
+  .about .row .image_container .solidCircle {
+    right: 4%;
+    top: 3%;
+  }
+}
 .about .row .description {
   display: flex;
   justify-content: center;
@@ -103,9 +130,11 @@
   padding: 4rem;
   color: #fff !important;
   font-weight: 900;
+  gap: 10px;
 }
 .about .row .description h1 {
   font-size: 13vmin;
+  line-height: 1 !important;
   text-transform: capitalize;
 }
 .about .row .description h1:nth-child(1) {

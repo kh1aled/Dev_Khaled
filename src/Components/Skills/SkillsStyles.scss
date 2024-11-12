@@ -12,26 +12,25 @@
   font-style: normal;
   font-family: "Aref Ruqaa", serif;
   // background-image: url(../../assets/assets.png);
-  &.dark{
+  &.dark {
     background-color: #080c14;
-    .title{
+    .title {
       color: white;
     }
     .description {
       color: #fff;
       h1 {
-       
         p {
           color: #f7f4f4;
         }
       }
     }
-    .areas{
-      .slider{
-        .card{
-          .project-title{
+    .areas {
+      .slider {
+        .card {
+          .project-title {
             background-color: #111827;
-            h1{
+            h1 {
               color: #f3f4f6;
             }
           }
@@ -39,35 +38,59 @@
       }
     }
   }
-  &.light{
+  &.light {
     background-color: #fff;
-    .title{
+    .title {
       color: #121212;
     }
-     .description {
-        color: #121212;
-        font-weight: 700;
+    .description {
+      color: #121212;
+      font-weight: 700;
 
-        h1 {
-          p {
-            color:#000000;
-          }
+      h1 {
+        p {
+          color: #000000;
         }
       }
-      .areas{
-        .slider{
-          .card{
-            .project-title{
-              background-color: #f3f4f6;
-              box-shadow:-5px 5px 15px rgba(0, 0, 0, 0.4);
-              h1{
-                color: black;
-                font-weight: 700;
-              }
+    }
+    .areas {
+      .slider {
+        .card {
+          .project-title {
+            background-color: #f3f4f6;
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.4);
+            h1 {
+              color: black;
+              font-weight: 700;
             }
           }
         }
       }
+    }
+    .slider {
+      .slider_container {
+        .skill-item {
+          background-color: #f3f4f6;
+          box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.4);
+          h1 , i{
+            color: black;
+          }
+        }
+      }
+    }
+    .btn{
+      background-color: rgb(7 ,89 ,133);
+      color: white;
+      &:hover{
+        background: transparent;
+        border:1px solid rgb(7 ,89 ,133);
+        color: rgb(7 ,89 ,133);
+        a{
+          color: rgb(7 ,89 ,133);
+
+        }
+      }
+    }
   }
   .title {
     width: 30%;
@@ -100,25 +123,27 @@
     }
   }
 
-  .description{
+  .description {
     margin: 2rem auto;
     width: 80%;
     font-size: 1.2rem;
     color: #fff;
     line-height: 3rem;
+    text-align: center;
   }
-  .slider{
+  .slider {
     margin: auto;
     width: 90%;
     overflow: hidden;
     padding: 60px 0 0 0;
     display: flex;
     gap: 3rem;
-    .slider_container{
+    .slider_container {
       gap: 1rem;
       text-align: center;
       justify-content: center;
-      .skill-item{
+      margin: 22px auto;
+      .skill-item {
         background-color: #111827;
         width: 12rem;
         height: 12rem;
@@ -134,15 +159,16 @@
         gap: 1rem;
         cursor: pointer;
         transition: 0.5s;
-        &:hover{
+        &:hover {
           transform: translateY(-10px);
         }
-        i{
+        i {
           width: 4rem;
         }
       }
+      
     }
-  
+
     // &:hover .skills_container{
     //   animation-play-state: paused;
     // }
@@ -160,20 +186,20 @@
     //   // &.ar{
     //   //   animation: slideAnimationAr 10s linear infinite both;
     //   // }
-      
+
     // }
   }
-  .btn{
+  .btn {
     background-color: rgb(6, 182, 212);
     padding: 0.5rem 1rem;
     margin: 40px auto;
     display: flex;
     font-size: 21px;
-    a{
-      color: #fff !important; 
-
+    border: 2px solid transparent;
+    a {
+      color: #fff ;
     }
-    &:hover{
+    &:hover {
       background: transparent;
       border: 2px solid rgb(6, 182, 212) !important;
     }
@@ -181,10 +207,18 @@
 }
 
 @keyframes slideAnimation {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 @keyframes slideAnimationAr {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

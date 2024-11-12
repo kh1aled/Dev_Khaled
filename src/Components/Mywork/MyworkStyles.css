@@ -7,6 +7,38 @@
   font-style: normal;
   font-family: "Aref Ruqaa", serif;
 }
+.work.light {
+  background-color: #fff;
+}
+.work.light .title {
+  color: #121212;
+}
+.work.light .description {
+  color: #121212;
+  font-weight: 700;
+}
+.work.light .description h1 p {
+  color: #000000;
+}
+.work.light .slider .slider_container .work-item .card .project-title {
+  background-color: #f3f4f6;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.work.light .slider .slider_container .work-item .card .project-title h1, .work.light .slider .slider_container .work-item .card .project-title i {
+  color: black;
+}
+.work.light .btn {
+  background-color: rgb(7, 89, 133);
+  color: white;
+}
+.work.light .btn:hover {
+  background: transparent;
+  border: 1px solid rgb(7, 89, 133);
+  color: rgb(7, 89, 133);
+}
+.work.light .btn:hover a {
+  color: rgb(7, 89, 133);
+}
 .work .title {
   width: 30%;
   text-transform: capitalize;
@@ -116,10 +148,10 @@
   margin: 40px auto;
   display: flex;
   font-size: 21px;
+  border: 2px solid transparent;
 }
 .work .btn a {
-  color: #fff !important;
-  text-transform: capitalize !important;
+  color: #fff;
 }
 .work .btn:hover {
   background: transparent;

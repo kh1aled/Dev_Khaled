@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Fotter = () => {
   return (
-    <section className="fotter">
+    <section id='contact' className="fotter">
       <div className="social_links">
         <ul>
           <li data-aos="fade-right">

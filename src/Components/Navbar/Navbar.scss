@@ -1,7 +1,12 @@
 @use "../../styles/variables/colors" as *;
 @use "../../styles/variables/mediaQuery" as *;
 @use "../../styles/mixins" as *;
-
+// :root {
+//   --var-ten: 50px;
+//   --var-zero-x: 0px;
+//   --var-zero-y: 0px;
+//   --orbit-radius: 100px; /* نصف قطر الدوران */
+// }
 .myNav {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
@@ -13,9 +18,42 @@
   line-height: 5rem;
   background-color: transparent;
   transition: 0.4s;
+
+  &.light {
+    background-color: transparent;
+    &.active {
+      background-color: #fff !important;
+    }
+    .navbar-toggler {
+      color: #03a9f4;
+    }
+    .collapse {
+      &.show{
+        .navbar-nav {
+          .nav-item {
+            &.lang{
+              color: #fff;
+            }
+            .nav-link {
+              color: #fff;
+
+            }
+          }
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: black;
+          }
+        }
+      }
+    }
+  }
   &.active {
     background-color: #080c14;
   }
+
   color: #fff;
   position: fixed !important;
 
@@ -25,10 +63,113 @@
 
   .navbar-toggler {
     border: none !important;
-    color: #fff !important;
+    color: #fff;
     float: right;
     &:focus {
       box-shadow: none;
+    }
+    #nav-icon {
+      --nav-icon-color: currentColor;
+      background: #0000;
+      border: 0;
+      cursor: pointer;
+      height: 20px;
+      position: relative;
+    }
+
+    #nav-icon,
+    #nav-icon span {
+      transition: all var(--transition-smooth) cubic-bezier(0.61, 0.01, 0.42, 1);
+      width: 30px;
+    }
+
+    #nav-icon span {
+      background: var(--nav-icon-color);
+      border: 2px solid var(--nav-icon-color);
+      border-radius: 0.125rem;
+      display: block;
+      height: 0;
+      position: absolute;
+    }
+
+    #nav-icon.open {
+      transform: scale(1.1);
+      transition-delay: 0.1s;
+      color: #03a9f4;
+    }
+
+    #nav-icon.open span:nth-child(3):before {
+      background: #f26451;
+      border-radius: 50%;
+      height: 2px;
+      width: 2px;
+    }
+
+    #nav-icon.open span {
+      --var-zero-x: 80%;
+      --var-zero-y: 0%;
+      --var-ten: 10%;
+      animation: atom 0.3s linear 1;
+      background: #0000;
+      border: 1px solid var(--nav-icon-color);
+      border-radius: 50%;
+      height: 9px;
+      margin-right: 2px;
+      margin-top: -2px;
+      top: 0;
+      width: 25px;
+    }
+
+    #nav-icon span:first-child {
+      top: 0;
+    }
+
+    #nav-icon span:nth-child(2) {
+      top: 8px;
+    }
+
+    #nav-icon span:nth-child(3) {
+      top: 16px;
+    }
+
+    #nav-icon.open span:first-child {
+      top: 7px;
+    }
+
+    #nav-icon.open span:nth-child(2) {
+      top: 8px;
+    }
+
+    #nav-icon.open span:nth-child(3) {
+      top: 7px;
+    }
+
+    #nav-icon span:nth-child(3):before {
+      position: absolute;
+      animation: ball 2s linear infinite;
+      border: 2px solid var(--nav-icon-color);
+      content: "";
+      display: block;
+      opacity: 0;
+      position: relative;
+      top: 0.25px;
+    }
+
+    #nav-icon.open span:first-child {
+      transform: rotate(-33deg);
+    }
+
+    #nav-icon.open span:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    #nav-icon.open span:nth-child(3) {
+      transform: rotate(33deg);
+    }
+
+    #nav-icon.open span:nth-child(3):before {
+      opacity: 1;
+      transition: opacity 0.6s cubic-bezier(0.61, 0.01, 0.42, 1);
     }
   }
 
@@ -152,7 +293,7 @@
           &.left {
             animation: moveToLeft 0.5s linear forwards;
           }
-    
+
           &.right {
             animation: moveToRight 0.5s linear forwards;
           }
@@ -166,18 +307,45 @@
     background: transparent;
     &.show {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       background-color: transparent;
       position: fixed;
       width: 100%;
-      left: 0;
-      top: 55px;
-      height: 55px;
+      left: 50%;
+      animation: visible 0.5s ease-in-out;
+      top: 5rem;
+      transform: translateX(-50%);
+      height: 50%;
       .navbar-nav {
+        margin-top: 0 !important;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: start;
+        align-items: start;
+        background-color: #080c14;
+        padding: 0;
+        .nav-item {
+          position: relative;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          width: 100%;
+          margin: 7.1px 0rem;
+          border-radius: 10px;
+          line-height: 2rem !important;
+          padding: 0px 14px;
+          transition: 0.2s;
+          &:hover {
+            background: rgb(7, 89, 133);
+          }
+          .nav-link {
+            width: 100%;
+          }
+          &.lang {
+            margin: 10px auto;
+          }
+        }
       }
     }
     div {
@@ -215,7 +383,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          color: #fff !important;
+          color: #fff;
           text-transform: capitalize;
           cursor: pointer;
           font-size: 3.2vmin;
@@ -234,17 +402,10 @@
           -o-object-fit: cover;
           object-fit: cover;
         }
-        // h1 {
-        //   color: #fff;
-        //   margin: 0px !important;
-        //   line-height: normal;
-        //   font-size: 27px;
-        // }
       }
     }
   }
 }
-
 
 @keyframes moveToLeft {
   from {
@@ -261,5 +422,78 @@
   }
   to {
     transform: translate(0%, -50%);
+  }
+}
+
+@keyframes atom {
+  0% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes division {
+  0% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes ball {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  10% {
+    left: 50%;
+    top: 0;
+  }
+
+  20% {
+    left: 100%;
+    top: 50%;
+  }
+
+  30% {
+    left: 50%;
+    top: 100%;
+  }
+
+  40% {
+    left: 0%;
+    top: 50%;
+  }
+
+  50% {
+    left: 0;
+    top: 0;
+  }
+
+  60% {
+    left: 50%;
+    top: 0;
+  }
+
+  70% {
+    left: 100%;
+    top: 50%;
+  }
+
+  85% {
+    left: 50%;
+    top: 100%;
+  }
+
+  100% {
+    left: 0%;
+    top: 50%;
+  }
+}
+
+@keyframes visible {
+  0% {
+    left: 152%;
+  }
+  100% {
+    left: 50%;
   }
 }

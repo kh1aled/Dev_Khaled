@@ -4,17 +4,27 @@
 
 .about {
   width: 100%;
-  background-color: rgb(51 63 90/0.5);
+  background-color: rgb(51 63 90);
   overflow: hidden;
- 
+  background-image: url(../../assets/assets.png);
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Aref Ruqaa", serif;
   .row {
-    padding-top: 80px;
     background-color: rgb(51 63 90/0.7);
+    div:nth-child(1) {
+      height: 33rem;
+
+    }
+    div:nth-child(2) {
+      height: 33rem;
+      
+    }
     .image_container {
       height: 50vh;
       position: relative;
       .profile {
-        top: 18%;
+        top: 0%;
         right: 18%;
         width: 60%;
         position: absolute;
@@ -22,7 +32,7 @@
         z-index: 10;
       }
       .circle {
-        top: 30%;
+        top: 13%;
         right: 14%;
         transform: translateY(0) rotate(276deg);
         width: 66%;
@@ -50,9 +60,9 @@
         animation-timing-function: ease-in-out;
         animation-fill-mode: both;
         animation-direction: alternate-reverse;
-        @include mediaQuery($smallScreen_max_width){
-          top: 40%;
-
+        @include mediaQuery($smallScreen_max_width) {
+          top: 30%;
+          right: 32%;
         }
       }
       .wave {
@@ -68,6 +78,9 @@
         animation-timing-function: ease-in-out;
         animation-fill-mode: both;
         animation-direction: alternate-reverse;
+        @include mediaQuery($smallScreen_max_width) {
+          top: 12%;
+        }
       }
       .smcircle {
         right: 10%;
@@ -82,6 +95,10 @@
         animation-timing-function: ease-in-out;
         animation-fill-mode: both;
         animation-direction: alternate-reverse;
+        @include mediaQuery($smallScreen_max_width) {
+          right: 4%;
+          top: 3%;
+        }
       }
       .solidCircle {
         right: 10%;
@@ -97,6 +114,10 @@
         animation-timing-function: ease-in-out;
         animation-fill-mode: both;
         animation-direction: alternate-reverse;
+        @include mediaQuery($smallScreen_max_width) {
+          right: 4%;
+          top: 3%;
+        }
       }
     }
     .description {
@@ -107,9 +128,11 @@
       padding: 4rem;
       color: #fff !important;
       font-weight: 900;
-   
+      gap: 10px;
+
       h1 {
         font-size: 13vmin;
+        line-height: 1 !important;
         &:nth-child(1) {
           color: $textColor;
           font-size: 6vmin;
@@ -140,7 +163,6 @@
     }
   }
 }
-
 
 @keyframes movecircle {
   from {

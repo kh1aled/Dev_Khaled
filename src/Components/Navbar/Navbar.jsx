@@ -1,10 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { changeLanguage } from "../../Store/TranslationSlice";
-import img from "../../assets/abc-block.png";
+import { Link } from "react-scroll";
 import dev_kh from "../../assets/dev_khaled.png";
-import { Link } from "react-router-dom";
 import { changeTheme } from "../../Store/themeSlice";
 const Navbar = ({ status, navWidth }) => {
   const texts = useSelector((state) => state.translation.texts);
@@ -12,10 +11,16 @@ const Navbar = ({ status, navWidth }) => {
 
   const dispatch = useDispatch();
   const collapse = useRef();
-  const bars = useRef();
+  const nav_toggler = useRef();
+  const nav = useRef();
+
+  // useEffect(()=>{
+  //   nav.current.classList.toggle("light")
+  // },[theme])
 
   const handleshow = () => {
     collapse.current.classList.toggle("show");
+    nav_toggler.current.classList.toggle("open");
   };
 
   const changeMyTheme = () => {
@@ -32,6 +37,7 @@ const Navbar = ({ status, navWidth }) => {
           ? "navbar myNav navbar-expand-lg navbar-light active"
           : "navbar myNav navbar-expand-lg navbar-light"
       }
+      ref={nav}
     >
       <button
         className="navbar-toggler"
@@ -43,7 +49,12 @@ const Navbar = ({ status, navWidth }) => {
         aria-label="Toggle navigation"
         onClick={handleshow}
       >
-        <i className="fa-solid fa-angle-down"></i>
+        {/* <i className="fa-solid fa-angle-down"></i> */}
+        <div id="nav-icon" class="text-sky-500 " ref={nav_toggler}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
       <div className={status ? "progress-bar active" : "progress-bar"}></div>
       <div
@@ -98,9 +109,7 @@ const Navbar = ({ status, navWidth }) => {
                 ></path>
               </svg>
             </button>
-            <button
-              className={theme === "light" ? "dark " : "dark active"}
-            >
+            <button className={theme === "light" ? "dark " : "dark active"}>
               <svg
                 width="24"
                 height="24"
@@ -127,16 +136,24 @@ const Navbar = ({ status, navWidth }) => {
       >
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item">
-            <Link className="nav-link">Home</Link>
+            <Link className="nav-link" to="landing">
+              Home
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link">projects</Link>
+            <Link className="nav-link" to="skills">
+              skills
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link">experience</Link>
+            <Link className="nav-link" to="experience">
+              experience
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link">contact</Link>
+            <Link className="nav-link" to={"contact"}>
+              contact
+            </Link>
           </li>
           <li className="nav-item lang">
             <a

@@ -13,6 +13,76 @@
   font-style: normal;
   font-family: "Aref Ruqaa", serif;
   // background-image: url(../../assets/assets.png);
+  // &.dark {
+  //   background-color: #080c14;
+  //   .title {
+  //     color: white;
+  //   }
+  //   .description {
+  //     color: #fff;
+  //     h1 {
+  //       p {
+  //         color: #f7f4f4;
+  //       }
+  //     }
+  //   }
+  //   .areas {
+  //     .slider {
+  //       .card {
+  //         .project-title {
+  //           background-color: #111827;
+  //           h1 {
+  //             color: #f3f4f6;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  &.light {
+    background-color: #fff;
+    .title {
+      color: #121212;
+    }
+    .description {
+      color: #121212;
+      font-weight: 700;
+
+      h1 {
+        p {
+          color: #000000;
+        }
+      }
+    }
+    .slider {
+      .slider_container {
+        .work-item {
+          .card{
+            .project-title{
+
+              background-color: #f3f4f6;
+              box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.4);
+              h1 , i{
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn{
+      background-color: rgb(7 ,89 ,133);
+      color: white;
+      &:hover{
+        background: transparent;
+        border:1px solid rgb(7 ,89 ,133);
+        color: rgb(7 ,89 ,133);
+        a{
+          color: rgb(7 ,89 ,133);
+        }
+      }
+    }
+  }
   .title {
     width: 30%;
     text-transform: capitalize;
@@ -125,9 +195,9 @@
     margin: 40px auto;
     display: flex;
     font-size: 21px;
+    border: 2px solid transparent;
     a {
-      color: #fff !important;
-      text-transform: capitalize !important;
+      color: #fff ;
     }
     &:hover {
       background: transparent;
